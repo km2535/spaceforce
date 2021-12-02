@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpaceForce | login</title>
+    <title>SpaceForce | mypage</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="body_mypage">
     <ul class="skipnavi">
         <li><a href="#container">본문내용</a></li>
     </ul>
@@ -81,30 +81,73 @@
         <!-- header 끝 -->
         <!-- container 시작 -->
         <div id="container">
-            <div class="box_inner body text_area">
-                <div class="login_wrap">
-                    <h1 class="loginTit">
-                        <a href="#"><img src="../images/rolling.jpg" alt="SpaceForce"></a>
-                        <ul class="login_list">
-                            <li class="kakao">
-                                <a href="mypage.html"><strong>카카오톡</strong>  로그인</a>
-                            </li>
-                            <li class="naver">
-                                <a href="mypage.html"><strong>네이버</strong> 로그인</a>
-                            </li>
-                            <li class="facebook">
-                                <a href="mypage.html"><strong> 페이스북</strong> 로그인</a>
-                            </li>
-                            <li class="email">
-                                <a href="mypage.html"><strong> 이메일</strong> 로그인</a>
-                            </li>
-                        </ul>
-                        <div class="btnonoff_line">
-                            <div class="switch"></div>
-                            <p><a href="#" class="btn_onoff">로그인 유지</a></p>
-                        </div>
-                    </h1>
+            <div class="location_area member">
+                <div class="box_inner">
+                    <h2 class="tit_page">Space Force</h2>
+                    <p class="location">MEMBER <span class="path">/</span> 개인 정보 수정</p>
+                    <ul class="page_menu clear">
+                        <li><a href="#" class="on">개인정보수정</a></li>
+                    </ul>
                 </div>
+            </div>
+            <!-- 본문 -->
+            <div class="bodytext_area box_inner">
+                <dl class="myinfo">
+                    <dt>내 정보</dt>
+                    <dd>
+                        <form action="#" class="regForm">
+                            <fieldset>
+                                <legend>내정보 입력 양식</legend>
+                                <ul class="reg_list">
+                                    <li class="clear">
+                                        <span class="tit_lbl">이름</span>
+                                        <div class="reg_content">김우주</div>
+                                    </li>
+                                    <li class="clear">
+                                        <span class="tit_lbl">생년월일</span>
+                                        <div class="reg_content">20111220</div>
+                                    </li>
+                                    <li class="clear">
+                                        <span class="tit_lbl">성별</span>
+                                        <div class="reg_content radio_area gender">
+                                            <input type="radio" class="css-radio" id="mmm_lbl" name="gender" value="남"><label for="mmm_lbl">남</label>
+                                            <input type="radio" class="css-radio" id="www_lbl" name="gender" value="여"><label for="www_lbl">여</label>
+                                        </div>
+                                    </li>
+                                    <li class="clear">
+                                        <span class="tit_lbl">연락처</span>
+                                        <div class="reg_content">010-2074-3280</div>
+                                    </li>
+                                    <li class="clear">
+                                        <span class="tit_lbl">SMS 수신동의</span>
+                                        <div class="reg_content radio_area">
+                                            <input type="radio" class="css-radio" 
+                                            id="smsyes_lbl" name="smsyesno" value="허용"><label for="smsyes_lbl">허용</label>
+                                            <input type="radio" class="css-radio"
+                                            id="smsno_lbl" name="smsyesno" value="허용"><label for="smsno_lbl">거부</label>
+                                            <p class="info_line">(고객님의 편의를 위해 알림, 공지사항, 이벤트 등의 내용을 제공하고자 합니다.)</p>
+                                        </div>
+                                    </li>
+                                    <li class="clear">
+                                        <span class="tit_lbl">이메일</span>
+                                        <div class="reg_content">km2535@naver.com</div>
+                                    </li>
+                                    <li class="clear">
+                                        <span class="tit_lbl">이메일 수신동의</span>
+                                        <div class="reg_content radio_area">
+                                            <input type="radio" class="css-radio" 
+                                            id="smsyes_lbl" name="smsyesno" value="허용"><label for="smsyes_lbl">허용</label>
+                                            <input type="radio" class="css-radio"
+                                            id="smsno_lbl" name="smsyesno" value="허용"><label for="smsno_lbl">거부</label>
+                                            <p class="info_line">(고객님의 편의를 위해 알림, 공지사항, 이벤트 등의 내용을 제공하고자 합니다.)</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p class="btn_line"><a href="#" class="btn_basecolor">수정</a></p>
+                            </fieldset>
+                        </form>
+                    </dd>
+                </dl>
             </div>
         </div>
         <!-- container 끝 -->
