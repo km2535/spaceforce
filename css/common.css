@@ -721,8 +721,8 @@ header > .header_area > h1 > a {
   border: #000000 solid 1px;
 }
 
-.b12_3d_glitch div:nth-child(2) {
-  color: #000000;
+.b12_3d_glitch div:nth-child(2) a {
+  color: #000;
   top: 2px;
   width: 100%;
   height: 180px;
@@ -736,9 +736,11 @@ header > .header_area > h1 > a {
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
 }
-
+.b12_3d_glitch:hover div:nth-child(2) a {
+  color: #fff;
+}
 .b12_3d_glitch:hover div:nth-child(2) {
-  color: #000000;
+  color: #000;
   animation: b12_3d_glitch 0.3s linear;
   -webkit-animation: b12_3d_glitch 0.3s linear;
   -moz-animation: b12_3d_glitch 0.3s linear;
