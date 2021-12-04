@@ -597,9 +597,9 @@ header > .header_area > h1 > a {
   text-align: center;
   font-size: 40px;
 }
-.about_area .about_box {
+/* .about_area .about_box {
   background: url(../images/cool-background.png) no-repeat center / cover;
-}
+} */
 .about_area .place_list li {
   float: left;
   width: 25%;
@@ -1289,3 +1289,25 @@ h1.loginTit > a > img {
 }
 
 /*--------내정보 페이지 끝--------*/
+
+body {
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+.about_box {
+  margin: 0 auto;
+  /* padding: 50px; */
+  background-color: #282828;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
+}
+
+.background {
+  position: absolute;
+  top: 700px;
+  height: 650px !important;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}

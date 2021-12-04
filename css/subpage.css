@@ -919,12 +919,13 @@ body {
 
 .background {
   position: absolute;
-  top: 0;
+  top: 300px;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: -1;
 }
+
 /*--------움직이는 바탕화면 끝--------*/
 /*--------우주군 소개 페이지 시작--------*/
 .mission_section {
@@ -1030,3 +1031,12 @@ body {
   text-shadow: 2px 3px 3px rgba (0, 0, 0, 1);
 }
 /*--------우주군 소개 페이지 끝--------*/
+/*--------소통 페이지 시작--------*/
+.location_area.community {
+  background: url(../images/sapce1.webp) no-repeat;
+  background-size: 100%;
+}
+.location_area.community p {
+  font-variant: small-caps;
+}
+/*--------소통 페이지 끝--------*/
