@@ -597,9 +597,7 @@ header > .header_area > h1 > a {
   text-align: center;
   font-size: 40px;
 }
-/* .about_area .about_box {
-  background: url(../images/cool-background.png) no-repeat center / cover;
-} */
+
 .about_area .place_list li {
   float: left;
   width: 25%;
