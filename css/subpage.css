@@ -986,6 +986,7 @@ body {
   margin-left: 50px;
   filter: grayscale(1);
   height: 300px;
+  border-radius: 20px;
 }
 .mission_section .mission_card div > h3 {
   width: 280px;
@@ -1185,7 +1186,7 @@ body {
   z-index: 3;
 }
 .engineer-pic img {
-  border-radius: 50px;
+  border-radius: 30px;
   position: absolute;
   width: 500px;
   filter: grayscale(1);
@@ -1242,3 +1243,46 @@ body {
   z-index: 0;
 }
 /*--------모집 페이지 끝--------*/
+/*--------민간 우주인 페이지 시작--------*/
+.location_area.civil {
+  background: url(../images/img_top3.jpg) no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+.civil .content {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.civil .clip iframe {
+  width: 100%;
+  height: 100%;
+}
+.civil .clip {
+  width: 55%;
+  height: 500px;
+
+  margin: 30px 30px 20px 30px;
+}
+.civil .position iframe {
+  width: 100%;
+  height: 360px;
+}
+.civil .position {
+  width: 38%;
+  height: 500px;
+  margin: 30px 20px 20px 0;
+}
+.civil .position h2 {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.civil .position p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
+}
+/*--------미간 우주인 페이지 끝--------*/
