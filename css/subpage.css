@@ -1485,10 +1485,10 @@ body {
   .civil .position .subp p {
     font-size: 1.5rem;
   }
-  footer {
+  .civil_footer {
     border: none;
   }
-  footer > .foot_area {
+  .civil_footer > .civil_foot {
     top: 350px;
     border-top: 1px solid #999;
   }
