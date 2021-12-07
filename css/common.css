@@ -1309,3 +1309,99 @@ body {
   right: 0;
   z-index: 0;
 }
+
+/*------------ 태블릿 반응형 시작 ------------*/
+@media screen and (max-width: 1065px) and (min-width: 801px) {
+  /* header를 포함한 div를 넓이 100%로 하여 화면에 들어오게 조절 */
+  .box_inner {
+    width: 100%;
+  }
+  header .header_area h1 {
+    padding-left: 20px;
+  }
+  .header_cont {
+    float: right;
+    width: 60%;
+    padding-right: 20px;
+  }
+  .header_cont .gnb li a {
+    padding: 26px 10px 26px 20px;
+  }
+  header > .header_area > h1 > a {
+    width: 200px;
+  }
+  .gnb_depth .submenu_list {
+    width: 100%;
+    padding-left: 52%;
+  }
+  .gnb_depth .submenu_list a {
+    padding: 20px;
+  }
+  #container {
+    padding-bottom: 20px;
+  }
+  .about_area .about_box li {
+    height: 380px;
+  }
+  .about_area .place_list p.txt {
+    font-size: 12px;
+  }
+  .about_area .place_list span.view {
+    display: none;
+  }
+  .about_area .about_box li .card1,
+  .about_area .about_box li .card2,
+  .about_area .about_box li .card3 {
+    height: 250px;
+  }
+  .background {
+    top: 740px;
+    height: 400px !important;
+  }
+  .button_base {
+    margin-left: 5%;
+    width: 55%;
+    font-size: 3rem;
+    line-height: 350%;
+  }
+  .appbbs_box > .bbs_line > .future > li > p:first-child {
+    font-weight: bold;
+  }
+  .appbbs_box > .bbs_line > .future > li > p:last-child {
+    font-size: 0.8rem;
+  }
+  .quick_area .quick_list {
+    display: none;
+  }
+  .to_top {
+    position: fixed;
+    right: 20px;
+    bottom: 180px;
+    text-align: center;
+    background: none;
+    z-index: 100;
+  }
+  .to_top a {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background: url(../images/baseline_rocket_black_24dp.png) no-repeat;
+    background-size: 45px;
+    border: none;
+  }
+  .regForm .reg_list li .tit_lbl {
+    width: 21%;
+  }
+  .regForm .reg_list li .reg_content {
+    width: 79%;
+    padding-left: 30px;
+  }
+  .appForm .app_list li .tit_lbl {
+    width: 21%;
+  }
+  .appForm .app_list li .app_content {
+    width: 77%;
+    padding-left: 10px;
+  }
+}
+/*------------ 태블릿 반응형 끝 ------------*/

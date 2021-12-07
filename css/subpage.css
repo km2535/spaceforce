@@ -1285,4 +1285,215 @@ body {
   width: 100%;
   text-align: center;
 }
-/*--------미간 우주인 페이지 끝--------*/
+.civil .position .subp h2,
+.civil .position .subp p {
+  display: none;
+}
+/*--------민간 우주인 페이지 끝--------*/
+/*------------ 태블릿 반응형 시작 ------------*/
+@media screen and (max-width: 1065px) and (min-width: 801px) {
+  /* header를 포함한 div를 넓이 100%로 하여 화면에 들어오게 조절 */
+  .box_inner {
+    width: 100%;
+  }
+  header .header_area h1 {
+    padding-left: 20px;
+  }
+  .header_cont {
+    float: right;
+    width: 60%;
+    padding-right: 20px;
+  }
+  .header_cont .gnb li a {
+    padding: 26px 10px 26px 20px;
+  }
+  header > .header_area > h1 > a {
+    width: 200px;
+  }
+  .gnb_depth .submenu_list {
+    width: 100%;
+    padding-left: 52%;
+  }
+  .gnb_depth .submenu_list a {
+    padding: 20px;
+  }
+  #container {
+    padding-bottom: 20px;
+  }
+
+  .quick_area .quick_list {
+    display: none;
+  }
+  .to_top {
+    position: fixed;
+    right: 20px;
+    bottom: 180px;
+    text-align: center;
+    background: none;
+    z-index: 100;
+  }
+  .to_top a {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background: url(../images/baseline_rocket_black_24dp.png) no-repeat;
+    background-size: 45px;
+    border: none;
+  }
+  /*---------- 우주군 소개 (태블릿) 시작---------*/
+  .mission_section {
+    width: 100%;
+  }
+  .mission_section .mission {
+    width: 100%;
+  }
+  .mission_section .mission h2 {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+  }
+  .mission_section .mission p {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .mission_section .mission h2:after {
+    display: none;
+  }
+  .mission_section > .gubun {
+    margin: 0 auto 10px;
+    padding: 0;
+    width: 80%;
+  }
+  .mission_section .mission_card {
+    flex: none;
+    display: inline-block;
+  }
+  .mission_section .mission_card_tit > h2 {
+    float: none;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+  }
+  .mission_section .mission_card_tit > h2::after {
+    display: none;
+  }
+
+  .mission_card .first,
+  .mission_card .second,
+  .mission_card .third {
+    float: left;
+    width: 32%;
+  }
+  .mission_card .first img,
+  .mission_card .second img,
+  .mission_card .third img {
+    width: 90% !important;
+  }
+  .mission_card .first h3,
+  .mission_card .first p,
+  .mission_card .second h3,
+  .mission_card .second p,
+  .mission_card .third h3,
+  .mission_card .third p {
+    font-size: 1rem !important;
+    width: 80% !important;
+  }
+  /*---------- 우주군 소개 (태블릿) 끝---------*/
+  /*---------- 우주군 모집 (태블릿) 시작---------*/
+  .officer_section {
+    display: block;
+  }
+  .officer_section .officer-pic img {
+    width: 400px;
+    top: 600px;
+  }
+  .officer-pic h3,
+  .officer-pic p {
+    top: 110px;
+  }
+  .officer_section .officer h2::before {
+    display: none;
+  }
+  .officer_section .officer h2 {
+    float: left;
+    left: 0;
+    top: -50px;
+  }
+  .engineer_section {
+    height: 0;
+  }
+  .engineer_section .engineer-pic img {
+    width: 400px;
+    top: 600px;
+    left: 530px;
+  }
+  .engineer-pic h3,
+  .engineer-pic p {
+    left: 200px;
+    top: -150px;
+  }
+  .engineer_section .engineer h2 {
+    float: right;
+    position: absolute;
+    top: 535px;
+    left: 480px;
+  }
+  .engineer_section .engineer h2::after {
+    display: none;
+  }
+  /*---------- 우주군 모집 (태블릿) 끝---------*/
+  /*---------- 민간 우주인 (태블릿) 시작---------*/
+
+  .civil .content {
+    display: inline-block;
+  }
+  .civil .clip {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    left: 0;
+    top: 600px;
+  }
+  .civil .position {
+    width: 100%;
+  }
+  .civil .position > iframe {
+    position: relative;
+    width: 630px;
+    left: 0;
+    top: 600px;
+  }
+  .civil .position .subp h2,
+  .civil .position .subp p {
+    display: block;
+    position: relative;
+    top: 250px;
+    width: 30%;
+    left: 650px;
+  }
+  .civil .position .subp h2 {
+    font-size: 2.5rem;
+  }
+  .civil .position .subp p {
+    font-size: 1.5rem;
+  }
+  footer {
+    border: none;
+  }
+  footer > .foot_area {
+    top: 350px;
+    border-top: 1px solid #999;
+  }
+
+  /*---------- 민간 우주인 (태블릿) 끝---------*/
+}
+
+/*------------ 태블릿 반응형 끝 ------------*/
