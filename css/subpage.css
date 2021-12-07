@@ -1291,7 +1291,7 @@ body {
 }
 /*--------민간 우주인 페이지 끝--------*/
 /*------------ 태블릿 반응형 시작 ------------*/
-@media screen and (max-width: 1065px) and (min-width: 801px) {
+@media screen and (max-width: 1200px) and (min-width: 801px) {
   /* header를 포함한 div를 넓이 100%로 하여 화면에 들어오게 조절 */
   .box_inner {
     width: 100%;
