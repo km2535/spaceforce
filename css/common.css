@@ -1302,8 +1302,9 @@ body {
 
 .background {
   position: absolute;
-  top: 0 !important;
+  width: 100% !important;
   height: 1000px !important;
+  top: 300px;
   bottom: 0;
   left: 0;
   right: 0;
