@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap" rel="stylesheet">
+    <script src="../src/particles.js"  defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/toggle.js" defer></script>
 </head>
 <body id="body_mypage">
     <ul class="skipnavi">
@@ -24,6 +27,12 @@
                 <!-- 로고 -->
                 <h1><a href="../index.html">SpaceForce</a></h1>
                 <!-- 모바일 메뉴 그리기 -->
+                <div class="openMOgnb">
+                    <!-- <b class="hdd">메뉴열기</b> -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <!-- 모바일 메뉴 그리기 끝 -->
                 <!-- header에 있는 메뉴 박스 -->
                 <div class="header_cont">
@@ -194,5 +203,7 @@
         </p>
     </div>
     <!-- quick list 끝 -->
+    <canvas class="background"></canvas>
+    <script src="../dist/particles.min.js"></script>
 </body>
 </html>

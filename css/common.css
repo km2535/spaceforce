@@ -36,7 +36,6 @@ body {
   white-space: normal;
   word-wrap: break-word;
   line-height: 1;
-  background: url(../images/background.png);
 }
 /* 모든 내용 붙이기 */
 * {
@@ -1073,58 +1072,55 @@ h1.loginTit > a > img {
   background: #888 url(../images/ico_cellphone.png) no-repeat 15px 50%;
   background-size: 45px 45px;
 }
-.btnonoff_line {
-  font-family: "GmarketSansMedium";
-  width: 75%;
-  margin: 10px auto;
+.login_btn_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_btn {
+  position: relative;
+  width: 50px;
+  height: 25px;
+}
+.login_btn input {
+  position: relative;
+  z-index: 1;
+  appearance: none;
+}
+.login_btn span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f80000;
+  border-radius: 80px;
+  transition: 0.5s;
+  box-shadow: 0 5px 10px #f8000088;
+}
+.login_btn input:checked ~ span {
+  background: #05be05;
+  box-shadow: 0 5px 10px #05be0588;
+}
+.login_btn span i {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 23px;
+  height: 23px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.login_btn input:checked ~ span i {
+  left: 26px;
+}
+.btnmsg {
+  margin: 20px auto;
   text-align: center;
 }
-.btnonoff_line p {
-  margin-top: 10px;
-}
-.btnonoff_line .btn_onoff {
-  margin-left: 5px;
-  font-size: 14px;
-}
-/* 스위치 모양 배경에 깔리는 파츠 */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 35px;
-  height: 22px;
-  padding: 0;
-  margin: 0;
-  border-radius: 16px;
-  background-color: #e5e5e5;
-  vertical-align: top;
-  appearance: none;
-  cursor: pointer;
-  z-index: 0;
-}
-/* 작은 하얀색을 덮어서 테두리처럼 보이게 하기 */
-.switch::before {
-  content: "";
-  position: absolute;
-  width: 33px;
-  height: 20px;
-  border-radius: 15px;
-  background-color: #fff;
-  z-index: 1;
-  left: 1px;
-  top: 1px;
-}
-/* 그림자랑 맨 위로 올리기 */
-.switch::after {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  width: 19px;
-  height: 19px;
-  left: 1px;
-  top: 1px;
-  box-shadow: 0 2px 5px #999;
-  background-color: #fff;
-  border-radius: 50%;
+.btnmsg span {
+  font-family: "twayair";
 }
 /*--------로그인 페이지 끝--------*/
 /*--------회원가입 페이지 시작--------*/
@@ -1302,12 +1298,12 @@ body {
 
 .background {
   position: absolute;
-  top: 700px;
-  height: 650px !important;
+  top: 0 !important;
+  height: 1000px !important;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 0;
+  z-index: -1;
 }
 
 /*------------ 태블릿 반응형 시작 ------------*/
@@ -1356,7 +1352,7 @@ body {
   }
   .background {
     top: 740px;
-    height: 400px !important;
+    /* height: 400px !important; */
   }
   .button_base {
     margin-left: 5%;
@@ -1405,3 +1401,548 @@ body {
   }
 }
 /*------------ 태블릿 반응형 끝 ------------*/
+/*------------ 모바일 반응형 끝 ------------*/
+
+@media screen and (max-width: 800px) {
+  .box_inner {
+    width: 100%;
+  }
+  header {
+    height: 90px;
+    text-align: center;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+  }
+
+  header.active {
+    height: 330px;
+  }
+  header .header_area h1 {
+    float: none;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding: 0;
+  }
+  header .header_area h1 a {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    background-size: 150px 150px;
+  }
+
+  header > .header_area > .openMOgnb {
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 35px;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  header > .header_area > .openMOgnb span {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    border-radius: 3px;
+    transition: 0.5s;
+  }
+  header > .header_area > .openMOgnb span:nth-child(1) {
+    transform: translateY(-12px);
+    width: 20px;
+    left: 11px;
+  }
+  header > .header_area > .openMOgnb.active span:nth-child(1) {
+    width: 30px;
+    transform: translateY(0) rotate(45deg);
+    transition-delay: 0.125s;
+  }
+  header > .header_area > .openMOgnb span:nth-child(2) {
+    transform: translateY(12px);
+    width: 15px;
+    left: 11px;
+  }
+  header > .header_area > .openMOgnb.active span:nth-child(2) {
+    width: 30px;
+    transform: translateY(0) rotate(130deg);
+    transition-delay: 0.2s;
+  }
+  header > .header_area > .openMOgnb.active span:nth-child(3) {
+    transform: translateX(60px);
+  }
+  .header_cont .util {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  .header_cont .util li {
+    float: left;
+  }
+  .header_cont .util li a {
+    font-size: 5px;
+  }
+  .header_cont .util li:first-child::after {
+    content: "|";
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 10px;
+    color: #a2a3a3;
+    position: relative;
+    top: -1px;
+  }
+  .header_cont .gnb {
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    overflow: hidden;
+  }
+  .header_cont .gnb li {
+    display: block;
+    transform: translateY(-700px);
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    transition: 0.5s;
+  }
+  .header_cont .gnb.active li {
+    display: block;
+    text-align: center;
+    transform: translateX(0);
+    width: 100%;
+  }
+
+  .header_cont .gnb.active li a {
+    padding: 20px 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 150px;
+  }
+
+  .about_area .about_box li {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+  }
+  .about_area .about_box li h3,
+  .about_area .about_box li p {
+    position: relative;
+    top: -250px;
+  }
+  .about_area .about_box li .view {
+    display: none;
+  }
+  .about_area .place_list li .loader {
+    position: relative;
+    top: 20px;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    /* border: 1px solid #fff; */
+    border-radius: 50%;
+    overflow: hidden;
+    animation: animate 4s linear infinite;
+  }
+  @keyframes animate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .about_area .place_list li .loader::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    /* overflow: hidden; */
+    background: linear-gradient(to top, transparent, rgba(0, 255, 249, 0.4));
+    background-size: 200px 360px;
+    background-repeat: no-repeat;
+    border-top-left-radius: 200px;
+  }
+  .about_area .place_list li .loader::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #00fff9;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 10px #00fff9, 0 0 20px #00fff9, 0 0 30px #00fff9,
+      0 0 40px #00fff9, 0 0 50px #00fff9, 0 0 60px #00fff9, 0 0 70px #00fff9,
+      0 0 80px #00fff9, 0 0 90px #00fff9, 0 0 100px #00fff9;
+  }
+  .about_area .place_list li .loader span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: #282828;
+    border-radius: 50%;
+  }
+  .about_area .place_list li .card1 {
+    position: relative;
+    top: -265px;
+    width: 270px;
+    margin: 0 auto;
+    height: 270px;
+    background: url(../images/earth2d.jpg);
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: inset 0 0 20px #03a9f4, 0 0 120px #03a9f4;
+    animation: animateEarth 20s linear infinite;
+  }
+  @keyframes animateEarth {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: 162.5%;
+    }
+  }
+  /* -------달--------*/
+  .about_area .place_list li .loader2 {
+    position: relative;
+    top: 20px;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    /* border: 1px solid #fff; */
+    border-radius: 50%;
+    overflow: hidden;
+    animation: animate 4s linear infinite;
+  }
+  @keyframes animate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .about_area .place_list li .loader2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    /* overflow: hidden; */
+    background: linear-gradient(to top, transparent, #6f7172);
+    background-size: 200px 360px;
+    background-repeat: no-repeat;
+    border-top-left-radius: 200px;
+  }
+  .about_area .place_list li .loader2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #6f7172;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 10px #6f7172, 0 0 20px #6f7172, 0 0 30px #6f7172,
+      0 0 40px #6f7172, 0 0 50px #6f7172, 0 0 60px #6f7172, 0 0 70px #6f7172,
+      0 0 80px #6f7172, 0 0 90px #6f7172, 0 0 100px #6f7172;
+  }
+  .about_area .place_list li .loader2 span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: #282828;
+    border-radius: 50%;
+  }
+  .about_area .place_list li .card2 {
+    position: relative;
+    top: -265px;
+    width: 270px;
+    margin: 0 auto;
+    height: 270px;
+    background: url(../images/moon.jpg);
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: inset 0 0 20px #6f7172, 0 0 120px #6f7172;
+    animation: animateEarth 20s linear infinite;
+  }
+  @keyframes animateEarth {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: 162.5%;
+    }
+  }
+  /* ----화성----- */
+  .about_area .place_list li .loader3 {
+    position: relative;
+    top: 20px;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    /* border: 1px solid #fff; */
+    border-radius: 50%;
+    overflow: hidden;
+    animation: animate 4s linear infinite;
+  }
+  @keyframes animate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .about_area .place_list li .loader3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    /* overflow: hidden; */
+    background: linear-gradient(to top, transparent, #f80000);
+    background-size: 200px 360px;
+    background-repeat: no-repeat;
+    border-top-left-radius: 200px;
+  }
+  .about_area .place_list li .loader3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #f3390b;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 10px #f3390b, 0 0 20px #f3390b, 0 0 30px #f3390b,
+      0 0 40px #f3390b, 0 0 50px #f3390b, 0 0 60px #f3390b, 0 0 70px #f3390b,
+      0 0 80px #f3390b, 0 0 90px #f3390b, 0 0 100px #f3390b;
+  }
+  .about_area .place_list li .loader3 span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: #282828;
+    border-radius: 50%;
+  }
+  .about_area .place_list li .card3 {
+    position: relative;
+    top: -265px;
+    width: 270px;
+    margin: 0 auto;
+    height: 270px;
+    background: url(../images/mars.jpg);
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: inset 0 0 20px #f3390b, 0 0 120px #f3390b;
+    animation: animateEarth 20s linear infinite;
+  }
+  @keyframes animateEarth {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: 162.5%;
+    }
+  }
+  .about_area .about_box .background {
+    display: none;
+  }
+  /* 버튼 */
+  .b12_3d_glitch {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .b12_3d_glitch div {
+    font-size: 2rem;
+    line-height: 5;
+  }
+  .appbbs_box > .bbs_line {
+    width: 100%;
+    float: none;
+  }
+  .appbbs_box > .bbs_line > .future {
+    margin-left: 30px;
+  }
+  .appbbs_box > .bbs_line > .future > li > p:first-child {
+    font-weight: bold;
+  }
+  .appbbs_box > .bbs_line > .future > li > p:last-child {
+    font-size: 0.8rem;
+  }
+  .quick_area .quick_list {
+    display: none;
+  }
+  .to_top {
+    position: fixed;
+    right: 20px;
+    bottom: 180px;
+    text-align: center;
+    background: none;
+    z-index: 100;
+  }
+  .to_top a {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background: url(../images/baseline_rocket_black_24dp.png) no-repeat;
+    background-size: 45px;
+    border: none;
+  }
+  footer .foot_area .snslink {
+    position: static;
+    width: 210px;
+    margin: 10px auto;
+  }
+  footer .gubun {
+    display: none;
+  }
+  footer .foot_area .snslink li {
+    margin-left: 30px;
+  }
+  footer .foot_area .snslink li:first-child {
+    margin-left: 0;
+  }
+  .login_wrap {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 75px;
+  }
+
+  .regForm {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .regForm .reg_list {
+    padding: 10px 0 0;
+    background: none;
+  }
+  .regForm .reg_list li {
+    position: relative;
+    min-height: 50px;
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+  }
+  .regForm .reg_list li .tit_lbl {
+    position: relative;
+    float: none;
+    width: auto;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  .regForm .reg_list li .reg_content {
+    float: none;
+    width: auto;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-top: 0;
+    padding-bottom: 20px;
+    font-size: 15px;
+  }
+  .regForm .reg_list li .reg_content .info_line {
+    padding: 10px 10px 3px 0;
+    line-height: 1.4;
+    font-size: 15px;
+  }
+  .regForm .reg_list li .reg_content * {
+    vertical-align: middle;
+  }
+  .regForm .reg_list li .reg_content label {
+    vertical-align: middle;
+  }
+  .appForm {
+    margin: 20px auto;
+  }
+  .appForm .pilsoo_item::before {
+    top: 1px;
+  }
+  .appForm .app_list li {
+    position: relative;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  .appForm .app_list li:last-child {
+    border-bottom: none;
+    padding-bottom: 10px;
+  }
+  .appForm .app_list li .tit_lbl {
+    float: none;
+    width: auto;
+    line-height: 30px;
+  }
+  .appForm .app_list li .app_content {
+    float: none;
+    width: auto;
+  }
+  .appForm .app_list li .app_content * {
+    vertical-align: middle;
+  }
+  .appForm .app_list li .app_content input[type="text"],
+  .appForm .app_list li .app_content input[type="password"],
+  .appForm .app_list li .app_content input[type="tel"] {
+    border: none;
+    width: 100% !important;
+  }
+  .appForm .app_list li .app_content.email_area {
+    padding: 5px 0 0;
+    font-size: 0;
+  }
+  .appForm .app_list li .app_content.email_area input[type="text"] {
+    border: 1px solid #ccc;
+    width: 45% !important;
+    font-size: 14px;
+  }
+  .appForm .app_list li .app_content.email_area .ico_space {
+    width: 10% !important;
+    text-align: center;
+    font-size: 14px;
+  }
+  /* 이메일 선택 select 전체크기로 바꿔주긴 */
+  .appForm .app_list li .select_common {
+    width: 100%;
+    height: 45px;
+    margin-top: 10px;
+  }
+  .appForm .app_list li .select_common select {
+    width: 100%;
+    height: 45px;
+  }
+  .appForm .app_list li .app_content.radio_area {
+    padding-left: 20px;
+    height: 40px;
+    padding-top: 10px;
+  }
+  .appForm .app_list li .app_content.checkbox_area {
+    padding-left: 20px;
+    height: 40px;
+    padding-top: 10px;
+  }
+  .appForm .app_list li textarea {
+    height: 130px;
+  }
+}
+/*------------ 모바일 반응형 끝 ------------*/
