@@ -27,7 +27,11 @@
   font-weight: normal;
   font-style: normal;
 }
+
 /* 공통 부분 */
+html {
+  overflow-x: hidden;
+}
 body {
   font-family: "Heebo", sans-serif;
   font-size: 16px;
@@ -1307,7 +1311,10 @@ body {
 }
 
 /*------------ 태블릿 반응형 시작 ------------*/
-@media screen and (max-width: 1200px) and (min-width: 801px) {
+@media screen and (max-width: 1200px) and (min-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
   /* header를 포함한 div를 넓이 100%로 하여 화면에 들어오게 조절 */
   .box_inner {
     width: 100%;
@@ -1403,7 +1410,10 @@ body {
 /*------------ 태블릿 반응형 끝 ------------*/
 /*------------ 모바일 반응형 끝 ------------*/
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
   .box_inner {
     width: 100%;
   }
@@ -1478,14 +1488,14 @@ body {
   }
   .header_cont .util {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 3px;
+    left: 2px;
   }
   .header_cont .util li {
     float: left;
   }
   .header_cont .util li a {
-    font-size: 5px;
+    font-size: 10px;
   }
   .header_cont .util li:first-child::after {
     content: "|";

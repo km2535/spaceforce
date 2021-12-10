@@ -28,6 +28,9 @@
   font-style: normal;
 }
 /* 공통 부분 */
+html {
+  overflow-x: hidden;
+}
 body {
   font-family: "Heebo", sans-serif;
   font-size: 16px;
@@ -919,6 +922,7 @@ body {
 
 .background {
   position: absolute;
+  width: 100% !important;
   top: 300px;
   bottom: 0;
   left: 0;
@@ -1291,7 +1295,10 @@ body {
 }
 /*--------민간 우주인 페이지 끝--------*/
 /*------------ 태블릿 반응형 시작 ------------*/
-@media screen and (max-width: 1200px) and (min-width: 801px) {
+@media screen and (max-width: 1300px) and (min-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
   /* header를 포함한 div를 넓이 100%로 하여 화면에 들어오게 조절 */
   .box_inner {
     width: 100%;
@@ -1305,7 +1312,7 @@ body {
     padding-right: 20px;
   }
   .header_cont .gnb li a {
-    padding: 26px 10px 26px 20px;
+    padding: 26px 5px 26px 20px;
   }
   header > .header_area > h1 > a {
     width: 200px;
@@ -1407,47 +1414,61 @@ body {
   }
   /*---------- 우주군 소개 (태블릿) 끝---------*/
   /*---------- 우주군 모집 (태블릿) 시작---------*/
+  .main_content {
+    margin: 0 auto;
+    display: flex;
+  }
   .officer_section {
+    width: 50%;
     display: block;
   }
-  .officer_section .officer-pic img {
-    width: 400px;
-    top: 600px;
-  }
-  .officer-pic h3,
-  .officer-pic p {
-    top: 110px;
+  .officer_section .officer h2 {
+    position: relative;
+    left: 0;
+    top: -100px;
+    width: 100%;
   }
   .officer_section .officer h2::before {
     display: none;
   }
-  .officer_section .officer h2 {
-    float: left;
-    left: 0;
-    top: -50px;
-  }
-  .engineer_section {
-    height: 0;
-  }
-  .engineer_section .engineer-pic img {
-    width: 400px;
+  .officer_section .officer-pic img {
+    position: absolute;
     top: 600px;
-    left: 530px;
+    width: 40%;
   }
-  .engineer-pic h3,
-  .engineer-pic p {
-    left: 200px;
-    top: -150px;
+  .officer-pic h3,
+  .officer-pic p {
+    top: 110px;
+    width: 50%;
+  }
+
+  .engineer_section {
+    width: 50%;
+    display: block;
   }
   .engineer_section .engineer h2 {
-    float: right;
-    position: absolute;
-    top: 535px;
-    left: 480px;
+    position: relative;
+    left: 0;
+    top: 50px;
+    width: 100%;
   }
   .engineer_section .engineer h2::after {
     display: none;
   }
+  .engineer-pic h3,
+  .engineer-pic p {
+    position: relative;
+    top: -80px;
+    left: -68%;
+    width: 50%;
+  }
+  .engineer_section .engineer-pic img {
+    position: relative;
+    top: 100px;
+    left: 10%;
+    width: 80%;
+  }
+
   /*---------- 우주군 모집 (태블릿) 끝---------*/
   /*---------- 민간 우주인 (태블릿) 시작---------*/
 
@@ -1467,7 +1488,7 @@ body {
   }
   .civil .position > iframe {
     position: relative;
-    width: 630px;
+    width: 60%;
     left: 0;
     top: 600px;
   }
@@ -1477,7 +1498,7 @@ body {
     position: relative;
     top: 250px;
     width: 30%;
-    left: 650px;
+    left: 62%;
   }
   .civil .position .subp h2 {
     font-size: 2.5rem;
@@ -1498,5 +1519,403 @@ body {
 
 /*------------ 태블릿 반응형 끝 ------------*/
 /*------------ 모바일 반응형 끝 ------------*/
+@media screen and (max-width: 700px) {
+  html {
+    overflow-x: hidden;
+  }
+  .box_inner {
+    width: 100%;
+  }
+  header {
+    height: 90px;
+    text-align: center;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+  }
 
+  header.active {
+    height: 330px;
+  }
+  header .header_area h1 {
+    float: none;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding: 0;
+  }
+  header .header_area h1 a {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    background-size: 150px 150px;
+  }
+
+  header > .header_area > .openMOgnb {
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 35px;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  header > .header_area > .openMOgnb span {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    border-radius: 3px;
+    transition: 0.5s;
+  }
+  header > .header_area > .openMOgnb span:nth-child(1) {
+    transform: translateY(-12px);
+    width: 20px;
+    left: 11px;
+  }
+  header > .header_area > .openMOgnb.active span:nth-child(1) {
+    width: 30px;
+    transform: translateY(0) rotate(45deg);
+    transition-delay: 0.125s;
+  }
+  header > .header_area > .openMOgnb span:nth-child(2) {
+    transform: translateY(12px);
+    width: 15px;
+    left: 11px;
+  }
+  header > .header_area > .openMOgnb.active span:nth-child(2) {
+    width: 30px;
+    transform: translateY(0) rotate(130deg);
+    transition-delay: 0.2s;
+  }
+  header > .header_area > .openMOgnb.active span:nth-child(3) {
+    transform: translateX(60px);
+  }
+  .header_cont .util {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+  }
+  .header_cont .util li {
+    float: left;
+  }
+  .header_cont .util li a {
+    font-size: 10px;
+  }
+  .header_cont .util li:first-child::after {
+    content: "|";
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 10px;
+    color: #a2a3a3;
+    position: relative;
+    top: -1px;
+  }
+  .header_cont .gnb {
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    overflow: hidden;
+  }
+  .header_cont .gnb li {
+    display: block;
+    transform: translateY(-700px);
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    transition: 0.5s;
+  }
+  .header_cont .gnb.active li {
+    display: block;
+    text-align: center;
+    transform: translateX(0);
+    width: 100%;
+  }
+
+  .header_cont .gnb.active li a {
+    padding: 20px 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 150px;
+  }
+
+  /*---------- 우주군 소개 (모바일) 시작---------*/
+  .mission_section {
+    width: 100%;
+  }
+  .mission_section .mission {
+    width: 100%;
+  }
+  .mission_section .mission h2 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .mission_section .mission p {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .mission_section .mission h2:after {
+    display: none;
+  }
+  .mission_section > .gubun {
+    margin: 0 auto 10px;
+    padding: 0;
+    width: 80%;
+  }
+  .mission_section .mission_card {
+    flex: none;
+    display: inline-block;
+  }
+  .mission_section .mission_card_tit > h2 {
+    float: none;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .mission_section .mission_card_tit > h2::after {
+    display: none;
+  }
+
+  .mission_card .first,
+  .mission_card .second,
+  .mission_card .third {
+    float: left;
+    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
+  }
+  .mission_card .first img,
+  .mission_card .second img,
+  .mission_card .third img {
+    margin: 0 10px !important;
+    width: 95% !important;
+  }
+  .mission_card .first h3,
+  .mission_card .first p,
+  .mission_card .second h3,
+  .mission_card .second p,
+  .mission_card .third h3,
+  .mission_card .third p {
+    margin: 0 40px !important;
+    font-size: 1rem !important;
+    width: 60% !important;
+  }
+  /*---------- 우주군 소개 (모바일) 끝---------*/
+  /*---------- 우주군 모집 (모바일) 시작---------*/
+  .main_content {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  .officer_section {
+    display: block;
+    width: 100%;
+  }
+  .officer_section .officer h2 {
+    position: relative;
+    top: -500px;
+    font-size: 250%;
+    left: 0;
+    display: block;
+    width: 100%;
+  }
+  .officer_section .officer h2::before {
+    display: none;
+  }
+  .officer-pic h3,
+  .officer-pic p {
+    position: relative;
+    top: -200px;
+    left: 0;
+    width: 50%;
+  }
+  .officer-pic img {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 50px;
+    width: 100%;
+  }
+  .engineer_section {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+  }
+  .engineer_section .engineer h2 {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    top: 100px;
+  }
+  .engineer_section .engineer h2::after {
+    display: none;
+  }
+  .engineer-pic img {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 200px;
+    width: 100%;
+  }
+  .engineer-pic h3,
+  .engineer-pic p {
+    position: relative;
+    top: -180px;
+    left: -70%;
+    width: 50%;
+  }
+  /*---------- 우주군 모집 (모바일) 끝---------*/
+  .quick_area .quick_list {
+    display: none;
+  }
+  .to_top {
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    text-align: center;
+    background: none;
+    z-index: 100;
+  }
+  .to_top a {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background: url(../images/baseline_rocket_black_24dp.png) no-repeat;
+    background-size: 45px;
+    border: none;
+  }
+  footer .foot_area .snslink {
+    position: static;
+    width: 210px;
+    margin: 10px auto;
+  }
+  footer .gubun {
+    display: none;
+  }
+  footer .foot_area .snslink li {
+    margin-left: 30px;
+  }
+  footer .foot_area .snslink li:first-child {
+    margin-left: 0;
+  }
+  /*------------ 민간 우주인(모바일) 시작 ------------*/
+  .civil {
+    display: block;
+  }
+  .location_area.civil {
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    top: 0;
+  }
+  .civil .content {
+    display: inline-block;
+  }
+  .civil .clip {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    left: 0;
+    top: 580px;
+  }
+  .civil .position {
+    width: 100%;
+  }
+  .civil .position > iframe {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 420px;
+  }
+  .civil .position h2,
+  .civil .position p {
+    width: 100%;
+    position: relative;
+    top: -80px;
+  }
+  .civil .position .subp h2,
+  .civil .position .subp p {
+    display: none;
+  }
+
+  .civil_footer {
+    border: none;
+  }
+  .civil_footer > .civil_foot {
+    top: 400px;
+    border-top: 1px solid #999;
+  }
+  /*------------ 민간 우주인(모바일) 끝 ------------*/
+  /*------------ 소통의 창(모바일) 시작 ------------*/
+  .location_area.community {
+    height: 340px;
+  }
+  .location_area.community .box_inner {
+    position: absolute;
+    top: -120px;
+  }
+  .bodytext_area.box_inner {
+    padding: 10px 10px;
+  }
+  fieldset {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .minisrch_form .tbox {
+    left: 0;
+    width: 100%;
+  }
+  .minisrch_form .btn_srch {
+    clear: both;
+    width: 100%;
+    line-height: 20px;
+    height: 20px;
+  }
+  .bbsListTbl {
+    width: 100%;
+    border-top: 2px solid #384d75;
+  }
+
+  .bbsListTbl th,
+  .bbsListTbl td {
+    padding: 10px;
+    box-sizing: border-box;
+    height: 45px;
+  }
+  /* 번호, 조회수 열은 없애주기 */
+  .bbsListTbl th:nth-child(1),
+  .bbsListTbl th:nth-child(3),
+  .bbsListTbl td:nth-child(1),
+  .bbsListTbl td:nth-child(3) {
+    display: none;
+  }
+  .bbsListTbl th:nth-child(2) {
+    width: 70%;
+  }
+  .bbsListTbl th:nth-child(4) {
+    width: 30%;
+  }
+
+  .bbsListTbl td {
+    line-height: 1.3;
+    border-bottom: 1px solid #ccc;
+  }
+
+  /*------------ 소통의 창(모바일) 끝 ------------*/
+}
 /*------------ 모바일 반응형 끝 ------------*/
