@@ -1090,6 +1090,7 @@ h1.loginTit > a > img {
   position: relative;
   z-index: 1;
   appearance: none;
+  -webkit-appearance: none;
 }
 .login_btn span {
   position: absolute;
